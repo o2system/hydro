@@ -1,6 +1,6 @@
 {
-    "name": "o2system/o2system",
-    "description": "O2System PHP Framework.",
+    "name": "o2system/webrestful",
+    "description": "O2System Framework Web-Restful Application Boilerplate.",
     "keywords": ["framework", "o2system"],
     "license": "MIT",
     "type": "project",
