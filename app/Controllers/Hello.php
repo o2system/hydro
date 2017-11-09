@@ -36,10 +36,8 @@ class Hello extends Controller
                     'agent'  => $_SERVER[ 'HTTP_USER_AGENT' ],
                 ],
                 'headers' => $headers,
-                'data'    => [
-                    'get'  => $_GET,
-                    'post' => $_POST,
-                ],
+                'get'  => $_GET,
+                'post' => $_POST,
             ]
         );
     }
