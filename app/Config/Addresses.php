@@ -10,7 +10,7 @@
  */
 // ------------------------------------------------------------------------
 
-use O2System\Framework\Http\Router\Addresses;
+use O2System\Kernel\Http\Router\Addresses;
 
 $addresses = new Addresses();
 
@@ -20,7 +20,7 @@ $addresses = new Addresses();
 $addresses->get(
     '/',
     function () {
-        return new \App\Controllers\Hello();
+        return new \App\Controllers\Service();
     }
 );
 

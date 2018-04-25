@@ -17,11 +17,11 @@ namespace App\Controllers;
 use O2System\Framework\Http\Controllers\Restful as Controller;
 
 /**
- * Class Hello
+ * Class Service
  *
  * @package App\Controllers
  */
-class Hello extends Controller
+class Service extends Controller
 {
     public function index()
     {
