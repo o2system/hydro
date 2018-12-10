@@ -4,7 +4,8 @@
 </div>
 
 <div align="center" markdown="1">
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/turahe/hydro/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/turahe/hydro/?branch=master)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/turahe/hydro/badges/quality-score.png?b=turahe)](https://scrutinizer-ci.com/g/turahe/hydro/?branch=turahe)
 
 [![Latest Stable Version](https://poser.pugx.org/o2system/hydro/v/stable)](https://packagist.org/packages/o2system/hydro)
 [![Total Downloads](https://poser.pugx.org/o2system/hydro/downloads)](https://packagist.org/packages/o2system/hydro)
