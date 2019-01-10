@@ -1,4 +1,3 @@
-#!/usr/bin/php -q
 <?php
 /**
  * This file is part of the O2System PHP Framework package.
@@ -9,6 +8,16 @@
  * @author         Steeve Andrian Salim
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
+// ------------------------------------------------------------------------
+
+// Valid PHP Version?
+$minPHPVersion = '7.2';
+if (phpversion() < $minPHPVersion)
+{
+    die("Your PHP version must be {$minPHPVersion} or higher to run O2System. Current version: " . phpversion());
+}
+unset($minPHPVersion);
+
 // ------------------------------------------------------------------------
 
 define( 'STARTUP_TIME', microtime( true ) );
@@ -110,7 +119,12 @@ if ( ! defined( 'DIR_RESOURCES' ) ) {
  * NO TRAILING SLASH!
  */
 if ( ! defined( 'DIR_PUBLIC' ) ) {
-    define( 'DIR_PUBLIC', 'public' );
+    // cpanel based hosting
+    if(is_dir('../public_html')) {
+        define( 'DIR_PUBLIC', 'public' );
+    } else {
+        define( 'DIR_PUBLIC', 'public' );
+    }
 }
 
 /*
@@ -118,7 +132,16 @@ if ( ! defined( 'DIR_PUBLIC' ) ) {
  * DEFINE ROOT PATH
  *---------------------------------------------------------------
  */
-define( 'PATH_ROOT', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
+define( 'PATH_ROOT', dirname( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR );
+
+/*
+ *---------------------------------------------------------------
+ * POINTING FRONT CONTROLLER DIRECTORY
+ *---------------------------------------------------------------
+ *
+ * Ensure the current directory is pointing to the front controller's directory
+ */
+chdir( __DIR__ . DIRECTORY_SEPARATOR );
 
 /*
 |--------------------------------------------------------------------------
@@ -131,8 +154,7 @@ define( 'PATH_ROOT', dirname( __FILE__ ) . DIRECTORY_SEPARATOR );
 | loading of any our classes "manually". Feels great to relax.
 |
 */
-
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 /*
  * ------------------------------------------------------
