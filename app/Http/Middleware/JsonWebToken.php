@@ -35,8 +35,13 @@ class JsonWebToken implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request)
     {
         if (services()->has('jsonWebTokenAuthentication')) {
+            /**
+             * This is an example to implement HTTP Authentication with Json Web Token (JWT).
+             * Try put this code into your request and see the result.
+             *
+             * eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjcsInVzZXJuYW1lIjoic3RlZXZlbnoifQ.D29MZcJa2svH5kNt4bFcUtIXvJ4ohYJ-0vNxsgMWAvc
+             */
             if(false !== ($token = input()->bearerToken())) {
-                print_out($token);
                 $payload = services('jsonWebTokenAuthentication')->decode($token);
                 globals()->store('payload', $payload);
             } else {

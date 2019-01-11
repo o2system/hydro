@@ -36,9 +36,50 @@ class WebToken implements RequestHandlerInterface
     {
         if (services()->has('webTokenAuthentication')) {
 
-            services('webTokenAuthentication')->setToken('WEBTOKEN-TESTING');
+            /**
+             * $token
+             *
+             * This is an example to implement HTTP X-WEB-TOKEN authentication.
+             * The web token can be generated freely according to your own token generator concept.
+             *
+             * @example
+             * This token is generated from simple generator concept.
+             * $token = md5(json_encode(['uid' => 7, 'username' => 'steevenz'] ));
+             *
+             * // result: ed3d68c4d51f52734e5bb6add37147d2
+             * 
+             * @var string
+             */
 
-            if ( ! services('webTokenAuthentication')->verify()) {
+            /**
+             * $users
+             *
+             * This is a users database thats hold users accounts.
+             * 
+             * @var array
+             */
+            $users = [
+                'ed3d68c4d51f52734e5bb6add37147d2' => [
+                    'uid' => 7,
+                    'username' => 'steevenz',
+                ]
+            ];
+
+            if($token = input()->webToken()) {
+                /**
+                 * Let's verify it with Web Token Authentication service callback.
+                 */
+                $validate = services('webTokenAuthentication')->verify($token, function($token) use ($users) {
+                    return array_key_exists($token, $users);
+                });
+
+                if($validate) {
+                    $payload = $users[ $token ]; // this is an example payload
+                    globals()->store('payload', $payload);
+                }
+            }
+            
+            if(empty($payload)) {
                 output()->sendError(403, [
                     'message' => language()->getLine('403_INVALID_WEBTOKEN')
                 ]);
