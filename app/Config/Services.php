@@ -27,5 +27,6 @@
 */
 
 $services = [
-	'webTokenAuthentication' => '\O2System\Security\Authentication\WebToken'
+	'webTokenAuthentication' => '\O2System\Security\Authentication\WebToken',
+	//'jsonWebTokenAuthentication' => '\O2System\Security\Authentication\Jwt\Token'
 ];
