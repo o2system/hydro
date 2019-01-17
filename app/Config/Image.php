@@ -8,9 +8,12 @@
  * @author         Steeve Andrian Salim
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
+
 // ------------------------------------------------------------------------
 
 use O2System\Image\Datastructures\Config;
+
+// ------------------------------------------------------------------------
 
 /**
  * Image Controller Configuration
@@ -22,8 +25,9 @@ use O2System\Image\Datastructures\Config;
 $image = new Config([
     'driver'              => 'gd', // gd | imagick | gmagick
     'maintainAspectRatio' => true,
+    'scaleDirective'      => 'FIT', // FIT | UP | DOWN
     'focus'               => 'NORTHWEST',
     'orientation'         => 'AUTO',
-    'quality'             => 100,
-    'cached'              => true,
+    'quality'             => 75,
+    'cached'              => false,
 ]);
