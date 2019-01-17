@@ -30,14 +30,16 @@ class Service extends Controller
         $this->sendPayload(
             [
                 'request' => [
-                    'method' => $_SERVER[ 'REQUEST_METHOD' ],
-                    'time'   => $_SERVER[ 'REQUEST_TIME' ],
-                    'uri'    => $_SERVER[ 'REQUEST_URI' ],
-                    'agent'  => $_SERVER[ 'HTTP_USER_AGENT' ],
+                    'method' => $this->input->server('REQUEST_METHOD'),
+                    'time'   => $this->input->server('REQUEST_TIME'),
+                    'uri'    => $this->input->server('REQUEST_URI'),
+                    'agent'  => $this->input->server('HTTP_USER_AGENT'),
+                    'authorization' => $this->input->server('HTTP_AUTHORIZATION')
                 ],
                 'headers' => $headers,
                 'get'  => $_GET,
                 'post' => $_POST,
+                'payload' => $this->globals->payload
             ]
         );
     }
