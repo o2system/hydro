@@ -14,20 +14,13 @@ namespace App\Http;
 
 // ------------------------------------------------------------------------
 
-use O2System\Reactor\Http;
+use O2System\Reactor\Http\Controllers\Restful;
 
 /**
- * Class Middleware
- *
+ * Class Controller
  * @package App\Http
  */
-class Middleware extends Http\Middleware
+class Controller extends Restful
 {
-    public function __construct()
-    {
-        parent::__construct();
 
-        $this->register( new Middleware\WebToken(), 'webToken' );
-        $this->register( new Middleware\JsonWebToken(), 'jsonWebToken' );
-    }
 }
