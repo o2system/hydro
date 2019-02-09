@@ -6,7 +6,6 @@
     "type": "project",
     "require": {
         "php": "~7.2.0",
-        "react/http": "^0.8.4",
         "o2system/reactor": "^1.0"
     },
     "autoload": {
