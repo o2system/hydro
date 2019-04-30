@@ -4,32 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a021dbae109abb9bfb2f9b523964d5af",
+    "content-hash": "a3484e126fcc12a6e6304156c21965f9",
     "packages": [
         {
-            "name": "evenement/evenement",
-            "version": "v3.0.1",
+            "name": "filp/whoops",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/igorw/evenement.git",
-                "reference": "531bfb9d15f8aa57454f5f0285b18bec903b8fb7"
+                "url": "https://github.com/filp/whoops.git",
+                "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/igorw/evenement/zipball/531bfb9d15f8aa57454f5f0285b18bec903b8fb7",
-                "reference": "531bfb9d15f8aa57454f5f0285b18bec903b8fb7",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
+                "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "php": "^5.5.9 || ^7.0",
+                "psr/log": "^1.0.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.0"
+                "mockery/mockery": "^0.9 || ^1.0",
+                "phpunit/phpunit": "^4.8.35 || ^5.7",
+                "symfony/var-dumper": "^2.6 || ^3.0 || ^4.0"
+            },
+            "suggest": {
+                "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
+                "whoops/soap": "Formats errors as SOAP responses"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
             "autoload": {
-                "psr-0": {
-                    "Evenement": "src"
+                "psr-4": {
+                    "Whoops\\": "src/Whoops/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -38,34 +50,40 @@
             ],
             "authors": [
                 {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
+                    "name": "Filipe Dobreira",
+                    "homepage": "https://github.com/filp",
+                    "role": "Developer"
                 }
             ],
-            "description": "Événement is a very simple event dispatching library for PHP",
+            "description": "php error handling for cool kids",
+            "homepage": "https://filp.github.io/whoops/",
             "keywords": [
-                "event-dispatcher",
-                "event-emitter"
+                "error",
+                "exception",
+                "handling",
+                "library",
+                "throwable",
+                "whoops"
             ],
-            "time": "2017-07-23T21:35:13+00:00"
+            "time": "2018-10-23T09:00:00+00:00"
         },
         {
             "name": "o2system/cache",
-            "version": "v2.2.36",
+            "version": "v2.2.90",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/cache.git",
-                "reference": "318839f99d274f95f1c34cfdc6300c5be743da2e"
+                "reference": "d6957b34d701d1fac3afa456db9f51525f68084e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/cache/zipball/318839f99d274f95f1c34cfdc6300c5be743da2e",
-                "reference": "318839f99d274f95f1c34cfdc6300c5be743da2e",
+                "url": "https://api.github.com/repos/o2system/cache/zipball/d6957b34d701d1fac3afa456db9f51525f68084e",
+                "reference": "d6957b34d701d1fac3afa456db9f51525f68084e",
                 "shasum": ""
             },
             "require": {
                 "o2system/kernel": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
             },
             "type": "package",
             "autoload": {
@@ -91,7 +109,7 @@
                     "role": "Template Designer"
                 }
             ],
-            "description": "PHP Cache Management Handler Library",
+            "description": "PHP Cache Handler Library",
             "keywords": [
                 "driver",
                 "framework",
@@ -99,25 +117,27 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-10T16:30:44+00:00"
+            "time": "2019-04-29T14:03:48+00:00"
         },
         {
             "name": "o2system/curl",
-            "version": "v2.1.23",
+            "version": "v2.1.47",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/curl.git",
-                "reference": "c7e6c7b4989153998ffbd7c505280d9b2b8eb8ad"
+                "reference": "46173d50f4267bc3c31621b81cb37be4bef6724e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/curl/zipball/c7e6c7b4989153998ffbd7c505280d9b2b8eb8ad",
-                "reference": "c7e6c7b4989153998ffbd7c505280d9b2b8eb8ad",
+                "url": "https://api.github.com/repos/o2system/curl/zipball/46173d50f4267bc3c31621b81cb37be4bef6724e",
+                "reference": "46173d50f4267bc3c31621b81cb37be4bef6724e",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-simplexml": "*",
                 "o2system/kernel": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
             },
             "type": "package",
             "autoload": {
@@ -151,25 +171,25 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-10T16:35:25+00:00"
+            "time": "2019-04-29T15:24:55+00:00"
         },
         {
             "name": "o2system/database",
-            "version": "v2.1.78",
+            "version": "v2.1.414",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/database.git",
-                "reference": "febb9266a83b171bd5db9819925b4922c09678c1"
+                "reference": "72b2e1ca96a47940ea9f8b5175787ff00a8801fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/database/zipball/febb9266a83b171bd5db9819925b4922c09678c1",
-                "reference": "febb9266a83b171bd5db9819925b4922c09678c1",
+                "url": "https://api.github.com/repos/o2system/database/zipball/72b2e1ca96a47940ea9f8b5175787ff00a8801fd",
+                "reference": "72b2e1ca96a47940ea9f8b5175787ff00a8801fd",
                 "shasum": ""
             },
             "require": {
                 "o2system/kernel": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
             },
             "type": "package",
             "autoload": {
@@ -203,79 +223,25 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-10T16:36:50+00:00"
-        },
-        {
-            "name": "o2system/email",
-            "version": "v1.0.28",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/o2system/email.git",
-                "reference": "efa2265f3928bbb852f15b1c0d075ac622393119"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/o2system/email/zipball/efa2265f3928bbb852f15b1c0d075ac622393119",
-                "reference": "efa2265f3928bbb852f15b1c0d075ac622393119",
-                "shasum": ""
-            },
-            "require": {
-                "o2system/kernel": "*",
-                "php": ">=5.6.0",
-                "phpmailer/phpmailer": "*",
-                "tijsverkoyen/css-to-inline-styles": "^2.2"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "O2System\\Email\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Steeven Andrian Salim",
-                    "email": "steevenz@steevenz.com",
-                    "homepage": "http://www.steevenz.com",
-                    "role": "Founder and Lead Project"
-                },
-                {
-                    "name": "Teguh Rianto",
-                    "email": "teguh.rianto22@gmail.com",
-                    "homepage": "http://teguhrianto22.pusku.com",
-                    "role": "Template Designer"
-                }
-            ],
-            "description": "PHP Email Library",
-            "keywords": [
-                "driver",
-                "framework",
-                "libraries",
-                "php",
-                "utilities"
-            ],
-            "time": "2019-01-10T16:38:13+00:00"
+            "time": "2019-04-29T15:21:38+00:00"
         },
         {
             "name": "o2system/filesystem",
-            "version": "v1.0.33",
+            "version": "v1.0.51",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/filesystem.git",
-                "reference": "b5564cdfd437ece8b8089fbe0f4b3955b1b36223"
+                "reference": "1de7e58bd22e93c00d87af24c03744a48a081e77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/filesystem/zipball/b5564cdfd437ece8b8089fbe0f4b3955b1b36223",
-                "reference": "b5564cdfd437ece8b8089fbe0f4b3955b1b36223",
+                "url": "https://api.github.com/repos/o2system/filesystem/zipball/1de7e58bd22e93c00d87af24c03744a48a081e77",
+                "reference": "1de7e58bd22e93c00d87af24c03744a48a081e77",
                 "shasum": ""
             },
             "require": {
                 "o2system/kernel": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
             },
             "type": "package",
             "autoload": {
@@ -309,81 +275,30 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-10T16:39:28+00:00"
-        },
-        {
-            "name": "o2system/gear",
-            "version": "v2.1.32",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/o2system/gear.git",
-                "reference": "1c6b845df2e99c26039c1eb20863f3435483bea5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/o2system/gear/zipball/1c6b845df2e99c26039c1eb20863f3435483bea5",
-                "reference": "1c6b845df2e99c26039c1eb20863f3435483bea5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6.0"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "O2System\\Gear\\": "src"
-                },
-                "files": [
-                    "src/Helper.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Steeven Andrian Salim",
-                    "email": "steevenz@steevenz.com",
-                    "homepage": "http://www.steevenz.com",
-                    "role": "Founder and Lead Project"
-                },
-                {
-                    "name": "Teguh Rianto",
-                    "email": "teguh.rianto22@gmail.com",
-                    "homepage": "http://teguhrianto22.pusku.com",
-                    "role": "Template Designer"
-                }
-            ],
-            "description": "PHP Developer Tools Library",
-            "keywords": [
-                "driver",
-                "framework",
-                "libraries",
-                "php",
-                "utilities"
-            ],
-            "time": "2019-01-10T16:41:51+00:00"
+            "time": "2019-04-09T06:21:39+00:00"
         },
         {
             "name": "o2system/kernel",
-            "version": "v1.9.134",
+            "version": "v1.9.148",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/kernel.git",
-                "reference": "da4c7436e2bc50aa8da20dd7914ffa89cf3cdda2"
+                "reference": "d96486e04a46b88bb6c3232a3986b2704638b978"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/kernel/zipball/da4c7436e2bc50aa8da20dd7914ffa89cf3cdda2",
-                "reference": "da4c7436e2bc50aa8da20dd7914ffa89cf3cdda2",
+                "url": "https://api.github.com/repos/o2system/kernel/zipball/d96486e04a46b88bb6c3232a3986b2704638b978",
+                "reference": "d96486e04a46b88bb6c3232a3986b2704638b978",
                 "shasum": ""
             },
             "require": {
-                "o2system/gear": "*",
+                "filp/whoops": "^2.3",
                 "o2system/psr": "*",
                 "o2system/spl": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
+            },
+            "require-dev": {
+                "o2system/gear": "*"
             },
             "type": "package",
             "autoload": {
@@ -424,25 +339,30 @@
                 "php",
                 "singleton"
             ],
-            "time": "2019-01-11T11:54:28+00:00"
+            "time": "2019-04-29T15:35:24+00:00"
         },
         {
             "name": "o2system/psr",
-            "version": "v1.2.101",
+            "version": "v1.2.155",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/psr.git",
-                "reference": "5629ca9b9508a29871e6c2be51d46c8ec2a7cc57"
+                "reference": "b5155535b23113ff6156a45a4b8deeffc0fcb9e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/psr/zipball/5629ca9b9508a29871e6c2be51d46c8ec2a7cc57",
-                "reference": "5629ca9b9508a29871e6c2be51d46c8ec2a7cc57",
+                "url": "https://api.github.com/repos/o2system/psr/zipball/b5155535b23113ff6156a45a4b8deeffc0fcb9e4",
+                "reference": "b5155535b23113ff6156a45a4b8deeffc0fcb9e4",
                 "shasum": ""
             },
             "require": {
-                "o2system/spl": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0",
+                "psr/cache": "*",
+                "psr/container": "*",
+                "psr/http-message": "*",
+                "psr/http-server-middleware": "*",
+                "psr/log": "*",
+                "psr/simple-cache": "*"
             },
             "type": "package",
             "autoload": {
@@ -476,27 +396,26 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-10T16:52:24+00:00"
+            "time": "2019-04-29T17:22:23+00:00"
         },
         {
             "name": "o2system/reactor",
-            "version": "v1.0.1",
+            "version": "v1.0.109",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/reactor.git",
-                "reference": "e22738925ef14d6ce08f60392cbef35bdfee99e0"
+                "reference": "c253f8c9190b0fff7f12372957464eb1c2aea92b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/reactor/zipball/e22738925ef14d6ce08f60392cbef35bdfee99e0",
-                "reference": "e22738925ef14d6ce08f60392cbef35bdfee99e0",
+                "url": "https://api.github.com/repos/o2system/reactor/zipball/c253f8c9190b0fff7f12372957464eb1c2aea92b",
+                "reference": "c253f8c9190b0fff7f12372957464eb1c2aea92b",
                 "shasum": ""
             },
             "require": {
                 "o2system/cache": "*",
                 "o2system/curl": "*",
                 "o2system/database": "*",
-                "o2system/email": "*",
                 "o2system/filesystem": "*",
                 "o2system/kernel": "*",
                 "o2system/security": "*",
@@ -531,25 +450,27 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-24T08:37:47+00:00"
+            "time": "2019-02-09T03:53:50+00:00"
         },
         {
             "name": "o2system/security",
-            "version": "v1.5.65",
+            "version": "v1.5.124",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/security.git",
-                "reference": "cf9e967cc730371270d6307564261a343b0dd23f"
+                "reference": "d7bdc1157ca8e0cd74c16b3e90a39370f51e5698"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/security/zipball/cf9e967cc730371270d6307564261a343b0dd23f",
-                "reference": "cf9e967cc730371270d6307564261a343b0dd23f",
+                "url": "https://api.github.com/repos/o2system/security/zipball/d7bdc1157ca8e0cd74c16b3e90a39370f51e5698",
+                "reference": "d7bdc1157ca8e0cd74c16b3e90a39370f51e5698",
                 "shasum": ""
             },
             "require": {
+                "ext-mcrypt": "*",
+                "ext-openssl": "*",
                 "o2system/session": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
             },
             "type": "package",
             "autoload": {
@@ -580,25 +501,25 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-11T11:52:57+00:00"
+            "time": "2019-04-09T06:24:19+00:00"
         },
         {
             "name": "o2system/session",
-            "version": "v2.0.26",
+            "version": "v2.0.44",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/session.git",
-                "reference": "3ef5b5cd6f17e7a8674d7014dde5b64c9c610603"
+                "reference": "49f2af67b876a58c0895ac80fc64a01b27ea6a6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/session/zipball/3ef5b5cd6f17e7a8674d7014dde5b64c9c610603",
-                "reference": "3ef5b5cd6f17e7a8674d7014dde5b64c9c610603",
+                "url": "https://api.github.com/repos/o2system/session/zipball/49f2af67b876a58c0895ac80fc64a01b27ea6a6d",
+                "reference": "49f2af67b876a58c0895ac80fc64a01b27ea6a6d",
                 "shasum": ""
             },
             "require": {
                 "o2system/kernel": "*",
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
             },
             "type": "package",
             "autoload": {
@@ -632,24 +553,24 @@
                 "php",
                 "session"
             ],
-            "time": "2019-01-10T16:54:52+00:00"
+            "time": "2019-04-29T14:50:02+00:00"
         },
         {
             "name": "o2system/spl",
-            "version": "v1.0.65",
+            "version": "v1.0.137",
             "source": {
                 "type": "git",
                 "url": "https://github.com/o2system/spl.git",
-                "reference": "c9828810f6f61ab72c741bbe96714bc55704b6f5"
+                "reference": "96bf277dcae82ce22d718696011a34bdaa485877"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/o2system/spl/zipball/c9828810f6f61ab72c741bbe96714bc55704b6f5",
-                "reference": "c9828810f6f61ab72c741bbe96714bc55704b6f5",
+                "url": "https://api.github.com/repos/o2system/spl/zipball/96bf277dcae82ce22d718696011a34bdaa485877",
+                "reference": "96bf277dcae82ce22d718696011a34bdaa485877",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6.0"
+                "php": "^7.2.0"
             },
             "type": "package",
             "autoload": {
@@ -683,73 +604,102 @@
                 "php",
                 "utilities"
             ],
-            "time": "2019-01-10T16:55:58+00:00"
+            "time": "2019-04-29T14:50:41+00:00"
         },
         {
-            "name": "phpmailer/phpmailer",
-            "version": "v6.0.6",
+            "name": "psr/cache",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "8190d73eb5def11a43cfb020b7f36db65330698c"
+                "url": "https://github.com/php-fig/cache.git",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/8190d73eb5def11a43cfb020b7f36db65330698c",
-                "reference": "8190d73eb5def11a43cfb020b7f36db65330698c",
+                "url": "https://api.github.com/repos/php-fig/cache/zipball/d11b50ad223250cf17b86e38383413f5a6764bf8",
+                "reference": "d11b50ad223250cf17b86e38383413f5a6764bf8",
                 "shasum": ""
             },
             "require": {
-                "ext-ctype": "*",
-                "ext-filter": "*",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "doctrine/annotations": "1.2.*",
-                "friendsofphp/php-cs-fixer": "^2.2",
-                "phpdocumentor/phpdocumentor": "2.*",
-                "phpunit/phpunit": "^4.8 || ^5.7",
-                "zendframework/zend-eventmanager": "3.0.*",
-                "zendframework/zend-i18n": "2.7.3",
-                "zendframework/zend-serializer": "2.7.*"
-            },
-            "suggest": {
-                "ext-mbstring": "Needed to send email in multibyte encoding charset",
-                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
-                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
-                "psr/log": "For optional PSR-3 debug logging",
-                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
-                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+                "php": ">=5.3.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "PHPMailer\\PHPMailer\\": "src/"
+                    "Psr\\Cache\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL-2.1"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Jim Jagielski",
-                    "email": "jimjag@gmail.com"
-                },
-                {
-                    "name": "Marcus Bointon",
-                    "email": "phpmailer@synchromedia.co.uk"
-                },
-                {
-                    "name": "Andy Prevost",
-                    "email": "codeworxtech@users.sourceforge.net"
-                },
-                {
-                    "name": "Brent R. Matzelle"
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
-            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2018-11-16T00:41:32+00:00"
+            "description": "Common interface for caching libraries",
+            "keywords": [
+                "cache",
+                "psr",
+                "psr-6"
+            ],
+            "time": "2016-08-06T20:24:11+00:00"
+        },
+        {
+            "name": "psr/container",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "time": "2017-02-14T16:28:37+00:00"
         },
         {
             "name": "psr/http-message",
@@ -802,207 +752,138 @@
             "time": "2016-08-06T14:39:51+00:00"
         },
         {
-            "name": "react/cache",
-            "version": "v0.5.0",
+            "name": "psr/http-server-handler",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/cache.git",
-                "reference": "7d7da7fb7574d471904ba357b39bbf110ccdbf66"
+                "url": "https://github.com/php-fig/http-server-handler.git",
+                "reference": "aff2f80e33b7f026ec96bb42f63242dc50ffcae7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/cache/zipball/7d7da7fb7574d471904ba357b39bbf110ccdbf66",
-                "reference": "7d7da7fb7574d471904ba357b39bbf110ccdbf66",
+                "url": "https://api.github.com/repos/php-fig/http-server-handler/zipball/aff2f80e33b7f026ec96bb42f63242dc50ffcae7",
+                "reference": "aff2f80e33b7f026ec96bb42f63242dc50ffcae7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "react/promise": "~2.0|~1.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
+                "php": ">=7.0",
+                "psr/http-message": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "React\\Cache\\": "src/"
+                    "Psr\\Http\\Server\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Async, Promise-based cache interface for ReactPHP",
-            "keywords": [
-                "cache",
-                "caching",
-                "promise",
-                "reactphp"
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
             ],
-            "time": "2018-06-25T12:52:40+00:00"
+            "description": "Common interface for HTTP server-side request handler",
+            "keywords": [
+                "handler",
+                "http",
+                "http-interop",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response",
+                "server"
+            ],
+            "time": "2018-10-30T16:46:14+00:00"
         },
         {
-            "name": "react/dns",
-            "version": "v0.4.16",
+            "name": "psr/http-server-middleware",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/dns.git",
-                "reference": "0a0bedfec72b38406413c6ea01e1c015bd0bf72b"
+                "url": "https://github.com/php-fig/http-server-middleware.git",
+                "reference": "2296f45510945530b9dceb8bcedb5cb84d40c5f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/0a0bedfec72b38406413c6ea01e1c015bd0bf72b",
-                "reference": "0a0bedfec72b38406413c6ea01e1c015bd0bf72b",
+                "url": "https://api.github.com/repos/php-fig/http-server-middleware/zipball/2296f45510945530b9dceb8bcedb5cb84d40c5f5",
+                "reference": "2296f45510945530b9dceb8bcedb5cb84d40c5f5",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "react/cache": "^0.5 || ^0.4 || ^0.3",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
-                "react/promise": "^2.1 || ^1.2.1",
-                "react/promise-timer": "^1.2",
-                "react/stream": "^1.0 || ^0.7 || ^0.6 || ^0.5 || ^0.4.5"
-            },
-            "require-dev": {
-                "clue/block-react": "^1.2",
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
+                "php": ">=7.0",
+                "psr/http-message": "^1.0",
+                "psr/http-server-handler": "^1.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
-                    "React\\Dns\\": "src"
+                    "Psr\\Http\\Server\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Async DNS resolver for ReactPHP",
-            "keywords": [
-                "async",
-                "dns",
-                "dns-resolver",
-                "reactphp"
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
             ],
-            "time": "2018-11-11T11:21:13+00:00"
+            "description": "Common interface for HTTP server-side middleware",
+            "keywords": [
+                "http",
+                "http-interop",
+                "middleware",
+                "psr",
+                "psr-15",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2018-10-30T17:12:04+00:00"
         },
         {
-            "name": "react/event-loop",
-            "version": "v1.0.0",
+            "name": "psr/log",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/event-loop.git",
-                "reference": "0266aff7aa7b0613b1f38a723e14a0ebc55cfca3"
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/event-loop/zipball/0266aff7aa7b0613b1f38a723e14a0ebc55cfca3",
-                "reference": "0266aff7aa7b0613b1f38a723e14a0ebc55cfca3",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8.35 || ^5.7 || ^6.4"
-            },
-            "suggest": {
-                "ext-event": "~1.0 for ExtEventLoop",
-                "ext-pcntl": "For signal handling support when using the StreamSelectLoop"
-            },
             "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\EventLoop\\": "src"
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "ReactPHP's core reactor event loop that libraries can use for evented I/O.",
-            "keywords": [
-                "asynchronous",
-                "event-loop"
-            ],
-            "time": "2018-07-11T14:37:46+00:00"
-        },
-        {
-            "name": "react/http",
-            "version": "v0.8.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/http.git",
-                "reference": "b29ab96557ac5c53e738fcb26f73f631a3f81f1a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/http/zipball/b29ab96557ac5c53e738fcb26f73f631a3f81f1a",
-                "reference": "b29ab96557ac5c53e738fcb26f73f631a3f81f1a",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
-                "php": ">=5.3.0",
-                "react/promise": "^2.3 || ^1.2.1",
-                "react/promise-stream": "^1.1",
-                "react/socket": "^1.0 || ^0.8.3",
-                "react/stream": "^1.0 || ^0.7.1",
-                "ringcentral/psr7": "^1.2"
-            },
-            "require-dev": {
-                "clue/block-react": "^1.1",
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
-            },
-            "type": "library",
             "autoload": {
                 "psr-4": {
-                    "React\\Http\\": "src"
+                    "Psr\\Log\\": "Psr/Log/"
                 }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Event-driven, streaming plaintext HTTP and secure HTTPS server for ReactPHP",
-            "keywords": [
-                "event-driven",
-                "http",
-                "https",
-                "reactphp",
-                "server",
-                "streaming"
-            ],
-            "time": "2019-01-16T07:26:32+00:00"
-        },
-        {
-            "name": "react/promise",
-            "version": "v2.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/promise.git",
-                "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
-                "reference": "31ffa96f8d2ed0341a57848cbb84d88b89dd664d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1010,256 +891,46 @@
             ],
             "authors": [
                 {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
             "keywords": [
-                "promise",
-                "promises"
+                "log",
+                "psr",
+                "psr-3"
             ],
-            "time": "2019-01-07T21:25:54+00:00"
+            "time": "2018-11-20T15:27:04+00:00"
         },
         {
-            "name": "react/promise-stream",
-            "version": "v1.1.1",
+            "name": "psr/simple-cache",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/promise-stream.git",
-                "reference": "00e269d611e9c9a29356aef64c07f7e513e73dc9"
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-stream/zipball/00e269d611e9c9a29356aef64c07f7e513e73dc9",
-                "reference": "00e269d611e9c9a29356aef64c07f7e513e73dc9",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3",
-                "react/promise": "^2.1 || ^1.2",
-                "react/stream": "^1.0 || ^0.7 || ^0.6 || ^0.5 || ^0.4 || ^0.3"
-            },
-            "require-dev": {
-                "clue/block-react": "^1.0",
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3",
-                "react/promise-timer": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\Stream\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@lueck.tv"
-                }
-            ],
-            "description": "The missing link between Promise-land and Stream-land for ReactPHP",
-            "homepage": "https://github.com/reactphp/promise-stream",
-            "keywords": [
-                "Buffer",
-                "async",
-                "promise",
-                "reactphp",
-                "stream",
-                "unwrap"
-            ],
-            "time": "2017-12-22T12:02:05+00:00"
-        },
-        {
-            "name": "react/promise-timer",
-            "version": "v1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/promise-timer.git",
-                "reference": "a11206938ca2394dc7bb368f5da25cd4533fa603"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise-timer/zipball/a11206938ca2394dc7bb368f5da25cd4533fa603",
-                "reference": "a11206938ca2394dc7bb368f5da25cd4533fa603",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
-                "react/promise": "^2.7.0 || ^1.2.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\Timer\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christian Lück",
-                    "email": "christian@lueck.tv"
-                }
-            ],
-            "description": "A trivial implementation of timeouts for Promises, built on top of ReactPHP.",
-            "homepage": "https://github.com/reactphp/promise-timer",
-            "keywords": [
-                "async",
-                "event-loop",
-                "promise",
-                "reactphp",
-                "timeout",
-                "timer"
-            ],
-            "time": "2018-06-13T16:45:37+00:00"
-        },
-        {
-            "name": "react/socket",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/socket.git",
-                "reference": "23b7372bb25cea934f6124f5bdac34e30161959e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/23b7372bb25cea934f6124f5bdac34e30161959e",
-                "reference": "23b7372bb25cea934f6124f5bdac34e30161959e",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
-                "php": ">=5.3.0",
-                "react/dns": "^0.4.13",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5",
-                "react/promise": "^2.6.0 || ^1.2.1",
-                "react/promise-timer": "^1.4.0",
-                "react/stream": "^1.1"
-            },
-            "require-dev": {
-                "clue/block-react": "^1.2",
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Socket\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Async, streaming plaintext TCP/IP and secure TLS socket server and client connections for ReactPHP",
-            "keywords": [
-                "Connection",
-                "Socket",
-                "async",
-                "reactphp",
-                "stream"
-            ],
-            "time": "2019-01-07T14:10:13+00:00"
-        },
-        {
-            "name": "react/stream",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/reactphp/stream.git",
-                "reference": "50426855f7a77ddf43b9266c22320df5bf6c6ce6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/50426855f7a77ddf43b9266c22320df5bf6c6ce6",
-                "reference": "50426855f7a77ddf43b9266c22320df5bf6c6ce6",
-                "shasum": ""
-            },
-            "require": {
-                "evenement/evenement": "^3.0 || ^2.0 || ^1.0",
-                "php": ">=5.3.8",
-                "react/event-loop": "^1.0 || ^0.5 || ^0.4 || ^0.3.5"
-            },
-            "require-dev": {
-                "clue/stream-filter": "~1.2",
-                "phpunit/phpunit": "^6.4 || ^5.7 || ^4.8.35"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "React\\Stream\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Event-driven readable and writable streams for non-blocking I/O in ReactPHP",
-            "keywords": [
-                "event-driven",
-                "io",
-                "non-blocking",
-                "pipe",
-                "reactphp",
-                "readable",
-                "stream",
-                "writable"
-            ],
-            "time": "2019-01-01T16:15:09+00:00"
-        },
-        {
-            "name": "ringcentral/psr7",
-            "version": "1.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ringcentral/psr7.git",
-                "reference": "dcd84bbb49b96c616d1dcc8bfb9bef3f2cd53d1c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ringcentral/psr7/zipball/dcd84bbb49b96c616d1dcc8bfb9bef3f2cd53d1c",
-                "reference": "dcd84bbb49b96c616d1dcc8bfb9bef3f2cd53d1c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3",
-                "psr/http-message": "~1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "RingCentral\\Psr7\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
+                    "Psr\\SimpleCache\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1267,119 +938,19 @@
             ],
             "authors": [
                 {
-                    "name": "Michael Dowling",
-                    "email": "mtdowling@gmail.com",
-                    "homepage": "https://github.com/mtdowling"
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
                 }
             ],
-            "description": "PSR-7 message implementation",
+            "description": "Common interfaces for simple caching",
             "keywords": [
-                "http",
-                "message",
-                "stream",
-                "uri"
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
             ],
-            "time": "2018-01-15T21:00:49+00:00"
-        },
-        {
-            "name": "symfony/css-selector",
-            "version": "v4.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "76dac1dbe2830213e95892c7c2ec1edd74113ea4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/76dac1dbe2830213e95892c7c2ec1edd74113ea4",
-                "reference": "76dac1dbe2830213e95892c7c2ec1edd74113ea4",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\CssSelector\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony CssSelector Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-01-03T09:07:35+00:00"
-        },
-        {
-            "name": "tijsverkoyen/css-to-inline-styles",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
-                "reference": "0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757",
-                "reference": "0ed4a2ea4e0902dac0489e6436ebcd5bbcae9757",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.5 || ^7.0",
-                "symfony/css-selector": "^2.7 || ^3.0 || ^4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TijsVerkoyen\\CssToInlineStyles\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Tijs Verkoyen",
-                    "email": "css_to_inline_styles@verkoyen.eu",
-                    "role": "Developer"
-                }
-            ],
-            "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
-            "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
-            "time": "2017-11-27T11:13:29+00:00"
+            "time": "2017-10-23T01:57:42+00:00"
         }
     ],
     "packages-dev": [],
@@ -1389,7 +960,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "~7.2.0"
+        "php": "^7.2.0"
     },
     "platform-dev": []
 }
