@@ -114,7 +114,7 @@ if ( ! defined( 'DIR_RESOURCES' ) ) {
  * DATABASE FOLDER NAME
  *---------------------------------------------------------------
  *
- * Resources folder name.
+ * Database folder name.
  *
  * NO TRAILING SLASH!
  */

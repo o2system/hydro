@@ -23,27 +23,8 @@ use App\Http\Controller;
  */
 class Service extends Controller
 {
-    /**
-     * Service::index
-     */
     public function index()
     {
-        $headers = apache_request_headers();
-
-        $this->sendPayload(
-            [
-                'request' => [
-                    'method' => input()->server('REQUEST_METHOD'),
-                    'time'   => input()->server('REQUEST_TIME'),
-                    'uri'    => input()->server('REQUEST_URI'),
-                    'agent'  => input()->server('HTTP_USER_AGENT'),
-                    'authorization' => input()->server('HTTP_AUTHORIZATION')
-                ],
-                'headers' => $headers,
-                'get'  => $_GET,
-                'post' => $_POST,
-                'payload' => globals()->offsetGet('payload')
-            ]
-        );
+        echo 'Hello World!';
     }
 }

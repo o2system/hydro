@@ -24,5 +24,5 @@
 */
 
 $models = [
-    //'options' => 'O2System\Framework\Models\Options',
+    //'options' => 'O2System\Reactor\Models\Options',
 ];

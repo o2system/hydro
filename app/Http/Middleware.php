@@ -27,7 +27,7 @@ class Middleware extends Http\Middleware
     {
         parent::__construct();
 
-        $this->register( new Middleware\WebToken(), 'webToken' );
-        $this->register( new Middleware\JsonWebToken(), 'jsonWebToken' );
+        //$this->register( new Middleware\WebToken(), 'webToken' );
+        //$this->register( new Middleware\JsonWebToken(), 'jsonWebToken' );
     }
 }

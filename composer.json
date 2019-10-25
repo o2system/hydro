@@ -1,7 +1,7 @@
 {
     "name": "o2system/hydro",
-    "description": "O2System PHP Framework.",
-    "keywords": ["framework", "o2system"],
+    "description": "O2System Restful Project Boilerplate.",
+    "keywords": ["framework", "mini-framework", "hydro", "o2system"],
     "license": "MIT",
     "type": "project",
     "require": {

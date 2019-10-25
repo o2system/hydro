@@ -21,4 +21,4 @@
 |	$helpers = [ 'url' ];
 */
 
-$helpers = [ 'Url', 'DateTime' ];
+$helpers = [ 'Url', 'Html', 'DateTime' ];
