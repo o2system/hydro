@@ -10,7 +10,7 @@
  */
 // ------------------------------------------------------------------------
 
-use O2System\Cache\Datastructures\Config;
+use O2System\Cache\DataStructures\Config;
 
 /**
  * Cache ItemPools Configuration
