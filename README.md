@@ -1,4 +1,4 @@
-![alt text](https://www.o2system.id/assets/img/covers/cover-o2system-hydro.png "O2System Hydro")
+![alt text](https://repository-images.githubusercontent.com/109955426/be904180-5c9c-11ea-987d-0ff82a4b09c9 "O2System Hydro Restful Service Boilerplate")
 
 
 [![Build Status](https://travis-ci.org/o2system/hydro.svg?branch=master)](https://travis-ci.org/o2system/hydro)
