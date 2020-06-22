@@ -14,7 +14,7 @@ namespace App\Http;
 
 // ------------------------------------------------------------------------
 
-use O2System\Reactor\Http\Controllers\Restful;
+use O2System\Framework\Http\Controllers\Restful;
 
 /**
  * Class Controller

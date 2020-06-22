@@ -14,7 +14,7 @@ namespace App\Http;
 
 // ------------------------------------------------------------------------
 
-use O2System\Reactor\Http;
+use O2System\Framework\Http;
 
 /**
  * Class Middleware
